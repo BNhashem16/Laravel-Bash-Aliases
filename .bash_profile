@@ -4,8 +4,9 @@ alias gs="git status"
 alias gc="git checkout"
 alias checkout='function _checkout(){ git checkout $1; };_checkout'
 alias pull="git pull"
-
-alias push='function _push(){ git add .; git commit -m $1; git push origin $2; };_push'
+alias br="git branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate"
+alias undo="reset HEAD~1 --mixed"
+alias push='function _push(){ git add .; git commit -m ${GIT_PREFIX:-. }; git push origin HEAD; };_push'
 
 # laravel --> php artisan
 alias art="php artisan"
