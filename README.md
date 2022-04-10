@@ -122,8 +122,7 @@ From here on you should be able to type art and it’ll auto expand into php art
     alias gc="git checkout"
     alias checkout='function _checkout(){ git checkout $1; };_checkout'
     alias pull="git pull"
-    alias push='function _push(){ git add .; git commit -m $1; git push origin $2; };_push'
-        -> $ push "your commit" $YOUR_BRANCH
+    alias push= git add . & git commit & git push 
 
 
 <a id="other"></a>
