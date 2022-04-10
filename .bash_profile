@@ -6,7 +6,10 @@ alias checkout='function _checkout(){ git checkout $1; };_checkout'
 alias pull="git pull"
 alias br="git branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate"
 alias undo="reset HEAD~1 --mixed"
-alias push='function _push(){ git add .; git commit -m --all-match; git push origin HEAD; };_push'
+alias push='function _push(){ git add .; git commit -m *; git push origin HEAD; };_push'
+# alias push='--global alias.a !f() { git commit -am "$1" && git push; }; f'
+# alias push='git config --global alias.a !f() { git commit -am "$1" && git push; }; f'
+# alias git config --global alias.a '!f() { git commit -am "$1" && git push; }; f'
 
 # laravel --> php artisan
 alias art="php artisan"
