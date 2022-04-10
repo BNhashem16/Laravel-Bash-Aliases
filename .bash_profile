@@ -5,7 +5,7 @@ alias gc="git checkout"
 alias checkout='function _checkout(){ git checkout $1; };_checkout'
 alias pull="git pull"
 
-alias push='function _push(){ git add .; git commit -m $1; git push; };_push'
+alias push='function _push(){ git add .; git commit -m $1; git push origin $2; };_push'
 
 # laravel --> php artisan
 alias art="php artisan"
